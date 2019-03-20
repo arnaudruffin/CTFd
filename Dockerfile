@@ -21,6 +21,15 @@ RUN for d in CTFd/plugins/*; do \
 
 RUN chmod +x /opt/CTFd/docker-entrypoint.sh
 
+
+
+RUN chmod -R 777 /opt/CTFd
+
+USER 1001
+
+
+
+
 EXPOSE 8080
 
 ENTRYPOINT ["/opt/CTFd/docker-entrypoint.sh"]
