@@ -39,7 +39,7 @@ python manage.py db upgrade
 # Start CTFd
 echo "Starting CTFd"
 exec gunicorn 'CTFd:create_app()' \
-    --bind '0.0.0.0:8000' \
+    --bind '0.0.0.0:8080' \
     --workers $WORKERS \
     --worker-class "$WORKER_CLASS" \
     --access-logfile "$ACCESS_LOG" \
